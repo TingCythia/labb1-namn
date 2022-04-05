@@ -5,6 +5,9 @@
 */
 ?>
 
+<?php get_header(); ?>
+
+
 <?php if (have_posts()): ?>
 <?php while (have_posts() ): the_post();?>
 <h2>
@@ -18,3 +21,7 @@
 <?php else: ?>
     <p> There are no posts!</p>
 <?php endif; ?>
+
+<?php get_sidebar('primary'); ?>
+
+<?php get_footer(); ?>
