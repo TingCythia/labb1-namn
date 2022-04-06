@@ -5,6 +5,16 @@
 
 add_theme_support('post-thumnails');
 add_theme_support('menus');
+
+/* //Lägg till menyer
+add_action('after_setup_theme', 'registrera_meny');
+ 
+function registrera_meny(){
+    register_nav_menu('huvudmeny','Huvud meny');
+    register_nav_menu('socialmeny','Social Meny');
+ 
+} */
+ 
 /**
  * Set up content width
  */
