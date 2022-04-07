@@ -5,16 +5,19 @@
 
 add_theme_support('post-thumnails');
 add_theme_support('menus');
+add_theme_support('widgets');
 
-/* //Lägg till menyer
-add_action('after_setup_theme', 'registrera_meny');
- 
-function registrera_meny(){
-    register_nav_menu('huvudmeny','Huvud meny');
-    register_nav_menu('socialmeny','Social Meny');
- 
-} */
- 
+add_action( 'widgets_init', 'my_awesome_sidebar' );
+function my_awesome_sidebar() {
+  $args = array(
+    'name'          => 'widget1',
+    'id'            => 'widget1',
+    'description'   => 'This is my first widget',
+  );
+
+  register_sidebar( $args );
+}
+
 /**
  * Set up content width
  */
