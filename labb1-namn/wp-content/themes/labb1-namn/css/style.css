@@ -89,6 +89,7 @@ textarea {
 		}
 
 			#header form input[type="text"] {
+				color: white;
 			}
 
 			#header form input[type="submit"] {
@@ -128,9 +129,10 @@ textarea {
 			padding: 0 15px;
 		}
 
+		
 			#nav .menu > li.current-menu-item {
-				background-color: rgba(0, 0, 0, 0.2);
-			}
+				background-color: rgba(146, 140, 140, 0.398);
+			} 
 
 			#nav .menu > li > a {
 				color: white;

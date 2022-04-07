@@ -13,7 +13,7 @@
       <title>Website Title</title>
       <meta name="description" content="Website description">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <!-- Add style link but not so sure whether need it or not after add function -->
+
       <link rel="stylesheet" type="text/css" href="<?php echo esc_url(get_template_directory_uri()); ?>/css/style.css"/>
       <?php wp_head();?>
     </head>
@@ -27,7 +27,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-8 col-sm-6">
-						<a class="logo" href="index.html">Labb 1</a>
+						<a class="logo" href="home.php">Labb 1</a>
 					</div>
 					<div class="col-sm-6 hidden-xs">
 						<form id="searchform" class="searchform">
@@ -58,19 +58,21 @@
 			</form>
 		</div>
 
+
+        
 		<nav id="nav">
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12">
 						<ul class="menu">
-							<li class="current-menu-item">
-								<a href="index.html">Home</a>
+							<<li class="current-menu-item" style="background-color: rgba(0, 0, 0, 0);">
+                            <a href="home.php">Home</a>
 							</li>
 							<li>
 								<a href="blogg.html">Blog</a>
 							</li>
 							<li>
-								<a href="undersida.html">Single 1</a>
+								<a href="single.php">Single 1</a>
 							</li>
 							<li>
 								<a href="undersida2.html">Single 2</a>
@@ -84,9 +86,10 @@
 							<li>
 								<a href="kontakt.html">Contact </a>
 							</li>
+
 						</ul>
 					</div>
 				</div>
-			</div>
+			</div> 
 		</nav>
     </header>
