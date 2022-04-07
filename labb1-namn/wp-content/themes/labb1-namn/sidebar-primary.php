@@ -31,3 +31,7 @@
         </aside>
    <?php endif; ?>
 </div>
+
+<div>
+    <?php dynamic_sidebar('widget1');?>
+</div>
