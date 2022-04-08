@@ -1,10 +1,12 @@
 <?php
 /** 
-* Change the settings in the index.php file
+* Template Name: Front Page Template
+* Description:frontpage
 * @package labb1-namn
+* @subpackage labb1-namn
 */
-?>
-<?php get_header(); ?>
+get_header(); ?>
+
 <main>
 			<section class="entry-content">
 				<div class="container">

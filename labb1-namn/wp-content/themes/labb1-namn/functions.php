@@ -7,6 +7,17 @@ add_theme_support('post-thumnails');
 add_theme_support('menus');
 add_theme_support('widgets');
 
+// add menu 
+add_action('after_setup_theme', 'registrera_meny');
+ 
+function registrera_meny(){
+    register_nav_menu('MainMenu','Main Menu');
+    register_nav_menu('SecondMenu','Second Menu');
+ 
+}
+
+
+// add widget and sidebar 
 add_action( 'widgets_init', 'my_awesome_sidebar' );
 function my_awesome_sidebar() {
   $args = array(
@@ -37,8 +48,9 @@ if ( ! isset( $content_width ) )
 
 
     //register scripts with update time
+    wp_register_script('bootstrap-js', get_template_directory_uri().'/js/jquery.js', [],null, true);
     wp_register_style('script-js', get_template_directory_uri().'/js/script.js', [], filemtime(get_template_directory().'/js/script.js'), true);
-    wp_register_script('bootstrap-js', get_template_directory_uri().'/js/jquery.js', [],false, true);
+   
 
     //enqueue styles
     wp_enqueue_style('style-css');
