@@ -81,18 +81,18 @@ get_header(); ?>
 
 						<aside id="secondary" class="col-xs-12 col-md-3">
 							<div id="sidebar">
-              <?php dynamic_sidebar('widget1');?>
+							<?php do_action( 'before_sidebar' ); ?>
+                             
 								<ul>
 									<li>
 										<form id="searchform" class="searchform">
 											<div>
-												<label class="screen-reader-text">Sök efter:</label>
-												<input type="text" />
-												<input type="submit" value="Sök" />
+											<?php get_search_form(); ?>
 											</div>
 										</form>
 									</li>
 								</ul>
+
 								<ul role="navigation">
 									<li class="pagenav">
 										<h2>Sidor</h2>
@@ -127,23 +127,31 @@ get_header(); ?>
 											</li>
 										</ul>
 									</li>
+
 									<li>
-										<h2>Arkiv</h2>
+									<?php dynamic_sidebar('widget1');?>
+										<h2>
+											<?php _e( 'Archives', 'shape' ); ?>
+										</h2>
 										<ul>
 											<li>
-												<a href="arkiv.html">oktober 2016</a>
+											<?php wp_get_archives( array( 'type' => 'monthly' ) ); ?>
 											</li>
 										</ul>
 									</li>
 									<li class="categories">
-										<h2>Kategorier</h2>
+										<h2>
+										<?php _e( 'Kategorier', 'shape' ); ?></h2>
 										<ul>
 											<li class="cat-item">
-												<a href="">Natur</a> (1)
-											</li>
-											<li class="cat-item">
-												<a href="">Okategoriserade</a> (3)
-											</li>
+											<?php $category = get_the_category();
+                                             $allcategory = get_the_category(); 
+                                            foreach ($allcategory as $category) {
+                                            ?>
+                                            <a class="btn"><?php echo $category->cat_name; ?></a>
+                                            <?php 
+                                            }
+                                            ?>
 										</ul>
 									</li>
 								</ul>

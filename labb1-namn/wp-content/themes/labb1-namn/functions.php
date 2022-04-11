@@ -10,7 +10,6 @@ add_theme_support('widgets');
 
 
 
-
 // add widget and sidebar 
 add_action( 'widgets_init', 'my_awesome_sidebar' );
 function my_awesome_sidebar() {

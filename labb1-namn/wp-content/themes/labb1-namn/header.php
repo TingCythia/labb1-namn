@@ -33,9 +33,7 @@
 					<div class="col-sm-6 hidden-xs">
 						<form id="searchform" class="searchform">
 							<div>
-								<label class="screen-reader-text">Sök efter:</label>
-								<input type="text" />
-								<input type="submit" value="Sök" />
+							<?php get_search_form(); ?>
 							</div>
 						</form>
 					</div>
@@ -67,10 +65,7 @@
 					<div class="col-xs-12">
 						<ul class="menu">
 							<<li class="current-menu-item" style="background-color: rgba(0, 0, 0, 0);">
-							<?php
-                            $menuarray = ['theme_location' => 'MainMenu',];
-                            wp_nav_menu($menuarray);
-                            ?>
+
                             <!-- <a href="home.php">Home</a> -->
 							</li>
 
