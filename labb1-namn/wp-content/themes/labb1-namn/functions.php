@@ -8,14 +8,7 @@ add_theme_support('post-thumnails');
 add_theme_support('menus');
 add_theme_support('widgets');
 
-// add menu 
-add_action('after_setup_theme', 'registrera_meny');
- 
-function registrera_meny(){
-    register_nav_menu('MainMenu','Main Menu');
-    register_nav_menu('SecondMenu','Second Menu');
- 
-}
+
 
 
 // add widget and sidebar 
