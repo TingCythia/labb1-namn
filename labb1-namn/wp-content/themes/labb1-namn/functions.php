@@ -41,13 +41,7 @@ if ( ! isset( $content_width ) )
 add_theme_support('post-thumnails');
 add_theme_support('menus');
 
-//add menu
-add_action('after_setup_theme', 'registrera_meny');
- 
-function registrera_meny(){
-    register_nav_menu('main_menu','Main Meny');
-    
-}
+
 
 
 
