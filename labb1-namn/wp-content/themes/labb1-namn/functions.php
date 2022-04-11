@@ -3,6 +3,7 @@
 *@package labb1-namn
 */
 
+
 add_theme_support('post-thumnails');
 add_theme_support('menus');
 add_theme_support('widgets');
@@ -29,12 +30,26 @@ function my_awesome_sidebar() {
   register_sidebar( $args );
 }
 
+
 /**
  * Set up content width
  */
 
 if ( ! isset( $content_width ) )
  $content_width = 800; /* pixels */
+
+add_theme_support('post-thumnails');
+add_theme_support('menus');
+
+//add menu
+add_action('after_setup_theme', 'registrera_meny');
+ 
+function registrera_meny(){
+    register_nav_menu('main_menu','Main Meny');
+    
+}
+
+
 
 /**
  * check if theme is existing, the function will hook the themes

@@ -74,6 +74,9 @@
                             <!-- <a href="home.php">Home</a> -->
 							</li>
 
+							<li class="current-menu-item" style="background-color: rgb(0, 0, 0, 0);">
+								<?php wp_nav_menu(array('theme_location' => 'main_menu'));?>
+							</li>
 
 						</ul>
 					</div>
