@@ -1,11 +1,12 @@
 <?php
 /** 
-* Change the settings in the index.php file
+* Template Name: Index 
+* Description:blog home 
 * @package labb1-namn
+* @subpackage labb1-namn
 */
-?>
+get_header(); ?>
 
-<?php get_header(); ?>
 
 <?php
 while ( have_posts() ) {
@@ -21,5 +22,5 @@ while ( have_posts() ) {
  
         <?php the_post_thumbnail();?>
 <?php }?>
-
+<?php get_sidebar();?>
 <?php get_footer(); ?>
