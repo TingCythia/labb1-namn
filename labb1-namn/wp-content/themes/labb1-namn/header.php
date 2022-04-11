@@ -65,28 +65,10 @@
 				<div class="row">
 					<div class="col-xs-12">
 						<ul class="menu">
-							<<li class="current-menu-item" style="background-color: rgba(0, 0, 0, 0);">
-                            <a href="home.php">Home</a>
+							<li class="current-menu-item" style="background-color: rgb(0, 0, 0, 0);">
+								<?php wp_nav_menu(array('theme_location' => 'main_menu'));?>
 							</li>
-							<li>
-								<a href="blogg.html">Blog</a>
-							</li>
-							<li>
-								<a href="single.php">Single 1</a>
-							</li>
-							<li>
-								<a href="undersida2.html">Single 2</a>
-							</li>
-							<li>
-								<a href="undersida3.html">Single 3</a>
-							</li>
-							<li>
-								<a href="undersida4.html">Single 4</a>
-							</li>
-							<li>
-								<a href="kontakt.html">Contact </a>
-							</li>
-
+				
 						</ul>
 					</div>
 				</div>

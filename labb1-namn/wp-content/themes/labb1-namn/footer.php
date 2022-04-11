@@ -52,10 +52,7 @@
 
 </body>
 </html>
-<?php
-    $menuarray = ['theme_location' => 'socialmeny',];
-    wp_nav_menu($menuarray);
-    ?>
+
 <?php wp_footer();?>
 </body>
 </html>
