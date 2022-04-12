@@ -82,7 +82,7 @@ get_header(); ?>
 						<aside id="secondary" class="col-xs-12 col-md-3">
 							<div id="sidebar">
 							<?php do_action( 'before_sidebar' ); ?>
-                             
+							
 								<ul>
 									<li>
 										<form id="searchform" class="searchform">
@@ -92,28 +92,29 @@ get_header(); ?>
 										</form>
 									</li>
 								</ul>
-
+								
 								<ul role="navigation">
+								
 									<li class="pagenav">
-										<h2>Sidor</h2>
+									<h2><?php _e( 'Sidor', 'shape' ); ?></h2>
 										<ul>
 											<li class="page_item current_page_item">
-												<a href="">Blogg</a>
+												<a href="<?php echo get_permalink( get_page_by_path( 'single' ) ); ?>">Blogg</a>
 											</li>
 											<li class="page_item">
 												<a href="">Exempelsida</a>
 											</li>
 											<li class="page_item">
-												<a href="">Kontakt</a>
+												<a href="<?php echo get_permalink( get_page_by_path( 'contact' ) ); ?>">Kontakt</a>
 											</li>
 											<li class="page_item page_item_has_children">
-												<a href="">Om mig</a>
+												<a href="<?php echo get_permalink( get_page_by_path( 'undersida4' ) ); ?>">Om mig</a>
 												<ul class="children">
 													<li class="page_item">
-														<a href="">Intressen</a>
+														<a href="<?php echo get_permalink( get_page_by_path( 'undersida4' ) ); ?>">Intressen</a>
 													</li>
 													<li class="page_item page_item_has_children">
-														<a href="">Portfolio</a>
+														<a href="<?php echo get_permalink( get_page_by_path( 'undersida4' ) ); ?>">Portfolio</a>
 														<ul class="children">
 															<li class="page_item">
 																<a href="">Projekt 1</a>
@@ -123,35 +124,26 @@ get_header(); ?>
 												</ul>
 											</li>
 											<li class="page_item">
-												<a href="">Startsida</a>
+												<a href="<?php echo get_page_by_path( 'front-page' ); ?>">Startsida</a>
 											</li>
 										</ul>
 									</li>
 
 									<li>
-									<?php dynamic_sidebar('widget1');?>
-										<h2>
-											<?php _e( 'Archives', 'shape' ); ?>
-										</h2>
+									
+									
 										<ul>
 											<li>
-											<?php wp_get_archives( array( 'type' => 'monthly' ) ); ?>
+											<?php dynamic_sidebar('widget1');?>
 											</li>
 										</ul>
 									</li>
 									<li class="categories">
 										<h2>
-										<?php _e( 'Kategorier', 'shape' ); ?></h2>
+									    </h2>
 										<ul>
 											<li class="cat-item">
-											<?php $category = get_the_category();
-                                             $allcategory = get_the_category(); 
-                                            foreach ($allcategory as $category) {
-                                            ?>
-                                            <a class="btn"><?php echo $category->cat_name; ?></a>
-                                            <?php 
-                                            }
-                                            ?>
+
 										</ul>
 									</li>
 								</ul>

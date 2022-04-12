@@ -22,6 +22,18 @@ function my_awesome_sidebar() {
   register_sidebar( $args );
 }
 
+// add widget for footer
+add_action( 'widgets_init', 'my_footer_widget' );
+function my_footer_widget() {
+  $args = array(
+    'name'          => 'widget2',
+    'id'            => 'widget2',
+    'description'   => 'footer widget',
+  );
+
+  register_sidebar( $args );
+}
+
 
 /**
  * Set up content width
